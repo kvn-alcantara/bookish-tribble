@@ -23,4 +23,10 @@ Abra <http://localhost:8000> no navegador.
 - HTML semântico e CSS responsivo sem framework.
 - Estado persistido com `localStorage`.
 - Testes smoke com o test runner nativo do Node.js.
-- Fluxo Git com branch de feature, commits pequenos, pull request e CI.
+- Fluxo Git com branch de feature, commits pequenos, pull request, CI e CD.
+
+## CI/CD
+
+O workflow `Quality checks` roda os testes e verifica a sintaxe JavaScript em cada push e pull request.
+
+O workflow `Deploy Study Garden` repete essas validações e prepara o artefato do site em pull requests. Depois de um merge no `main`, o artefato é publicado automaticamente no GitHub Pages.
