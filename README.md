@@ -18,12 +18,22 @@ python3 -m http.server 8000
 
 Abra <http://localhost:8000> no navegador.
 
+Para executar a aplicação em um container Docker:
+
+```bash
+docker build -t study-garden .
+docker run --detach --name study-garden-app --publish 8080:80 study-garden
+```
+
+Abra <http://localhost:8080>. O container pode ser conferido com `docker ps` e parado com `docker stop study-garden-app`.
+
 ## O que foi praticado
 
 - HTML semântico e CSS responsivo sem framework.
 - Estado persistido com `localStorage`.
 - Testes smoke com o test runner nativo do Node.js.
 - Fluxo Git com branch de feature, commits pequenos, pull request, CI e CD.
+- Imagem Docker baseada em Nginx para servir a aplicação estática.
 
 ## CI/CD
 
