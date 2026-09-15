@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Um painel leve para acompanhar sessões de estudo." />
+    <title>Study Garden</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./">Study Garden <span aria-hidden="true">✦</span></a>
+        <p class="date-label" id="current-date">Hoje</p>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Seu espaço de foco</p>
+          <h1 id="page-title">Cultive um pouco de conhecimento hoje.</h1>
+          <p class="intro">Registre sessões curtas, veja sua sequência e mantenha o próximo passo visível.</p>
+        </div>
+        <div class="streak-badge" aria-label="Sequência atual">
+          <span class="streak-number" id="streak-count">0</span>
+          <span>dias de<br />sequência</span>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Resumo dos estudos">
+        <article class="panel progress-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Progresso de hoje</p>
+              <h2><span id="minutes-complete">0</span> de 60 min</h2>
+            </div>
+            <span class="progress-percent" id="progress-percent">0%</span>
+          </div>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+          <p class="muted" id="progress-message">Uma sessão pequena já conta.</p>
+        </article>
+
+        <article class="panel next-panel">
+          <p class="eyebrow">Próximo passo</p>
+          <h2 id="next-task">Escolha uma sessão abaixo</h2>
+          <button class="text-button" id="complete-next" type="button" disabled>Marcar como feita <span aria-hidden="true">→</span></button>
+        </article>
+      </section>
+
+      <section class="sessions-section" aria-labelledby="sessions-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Trilha de hoje</p>
+            <h2 id="sessions-title">Sessões de estudo</h2>
+          </div>
+          <button class="outline-button" id="add-session" type="button">+ Nova sessão</button>
+        </div>
+        <div class="session-list" id="session-list"></div>
+        <p class="empty-state" id="empty-state" hidden>Nenhuma sessão ainda. Comece por uma ideia pequena.</p>
+      </section>
+    </main>
+    <script src="app.js" defer></script>
+  </body>
+</html>
