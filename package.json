@@ -1,0 +1,9 @@
+{
+  "name": "study-garden",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Um painel leve para cultivar uma rotina de estudos.",
+  "scripts": {
+    "test": "node --test"
+  }
+}
