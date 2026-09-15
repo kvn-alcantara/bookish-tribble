@@ -18,3 +18,5 @@ jobs:
         run: npm test
       - name: Check JavaScript syntax
         run: node --check app.js
+      - name: Build Docker image
+        run: docker build --tag study-garden:${{ github.sha }} .
